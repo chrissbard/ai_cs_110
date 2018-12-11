@@ -1,11 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#define MAX_LENGHT 255
 
 int main()
 {
-	char str[255];
-	char *pstr;
-	pstr = gets(str);
+	char *str;
+	printf("Enter the sentence\n");
+	str = malloc(sizeof(char)*(MAX_LENGHT+1));
+	char* pstr;
+	fgets(str, MAX_LENGHT, stdin);
+	pstr = str;
 	char newstr[255];
 
 	int count = 0;
